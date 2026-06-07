@@ -1,0 +1,2 @@
+# ReceiptOCR
+iOS mini project
