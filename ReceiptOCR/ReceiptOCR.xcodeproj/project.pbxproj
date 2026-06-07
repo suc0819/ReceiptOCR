@@ -17,6 +17,7 @@
 		E966C6922FD579DB00C838FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6912FD579DB00C838FE /* HomeViewController.swift */; };
 		E966C6942FD57AB500C838FE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6932FD57AB500C838FE /* ResultViewController.swift */; };
 		E966C6962FD57C2900C838FE /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6952FD57C2900C838FE /* HistoryViewController.swift */; };
+		E966C6982FD5AECA00C838FE /* ImageProcessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6972FD5AECA00C838FE /* ImageProcessingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E966C6912FD579DB00C838FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E966C6932FD57AB500C838FE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E966C6952FD57C2900C838FE /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		E966C6972FD5AECA00C838FE /* ImageProcessingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		E966C68D2FD569E500C838FE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E966C6972FD5AECA00C838FE /* ImageProcessingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E966C6982FD5AECA00C838FE /* ImageProcessingService.swift in Sources */,
 				E966C6922FD579DB00C838FE /* HomeViewController.swift in Sources */,
 				E966C67B2FD55D5100C838FE /* ViewController.swift in Sources */,
 				E966C6902FD56AC600C838FE /* ReceiptData.swift in Sources */,
