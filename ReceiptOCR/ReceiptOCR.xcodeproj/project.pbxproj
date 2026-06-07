@@ -18,6 +18,7 @@
 		E966C6942FD57AB500C838FE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6932FD57AB500C838FE /* ResultViewController.swift */; };
 		E966C6962FD57C2900C838FE /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6952FD57C2900C838FE /* HistoryViewController.swift */; };
 		E966C6982FD5AECA00C838FE /* ImageProcessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6972FD5AECA00C838FE /* ImageProcessingService.swift */; };
+		E966C69A2FD5B24E00C838FE /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6992FD5B24E00C838FE /* OCRService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E966C6932FD57AB500C838FE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E966C6952FD57C2900C838FE /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		E966C6972FD5AECA00C838FE /* ImageProcessingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingService.swift; sourceTree = "<group>"; };
+		E966C6992FD5B24E00C838FE /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				E966C6972FD5AECA00C838FE /* ImageProcessingService.swift */,
+				E966C6992FD5B24E00C838FE /* OCRService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				E966C6922FD579DB00C838FE /* HomeViewController.swift in Sources */,
 				E966C67B2FD55D5100C838FE /* ViewController.swift in Sources */,
 				E966C6902FD56AC600C838FE /* ReceiptData.swift in Sources */,
+				E966C69A2FD5B24E00C838FE /* OCRService.swift in Sources */,
 				E966C6772FD55D5100C838FE /* AppDelegate.swift in Sources */,
 				E966C6792FD55D5100C838FE /* SceneDelegate.swift in Sources */,
 				E966C6962FD57C2900C838FE /* HistoryViewController.swift in Sources */,
