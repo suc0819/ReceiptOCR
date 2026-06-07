@@ -15,18 +15,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxb-m9-Euw">
+                                <rect key="frame" x="34" y="88" width="322" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQs-IW-UVN">
+                                <rect key="frame" x="95" y="285" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="이미지 분석"/>
+                                <connections>
+                                    <action selector="selectImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8G-oc-pz3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkJ-Db-uST">
+                                <rect key="frame" x="233" y="285" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="분석 시작"/>
+                                <connections>
+                                    <action selector="startAnalyzeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wvv-Y0-v3T"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="UJy-yt-mBC"/>
                     <connections>
+                        <outlet property="receiptImageView" destination="Rxb-m9-Euw" id="kHH-8b-6Ve"/>
                         <segue destination="VtM-ZZ-SHv" kind="show" identifier="showResult" id="nj3-dp-4Dd"/>
                         <segue destination="lg4-5e-oad" kind="show" identifier="showHistory" id="5ag-9r-E2R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808" y="89"/>
+            <point key="canvasLocation" x="807.69230769230762" y="88.862559241706151"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Rby-bR-WWk">

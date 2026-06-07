@@ -7,8 +7,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController:  UIViewController{
 
+    @IBOutlet weak var receiptImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +17,19 @@ class HomeViewController: UIViewController {
     }
     
 
+    @IBAction func selectImageTapped(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true)
+    }
+    
+    @IBAction func startAnalyzeTapped(_ sender: Any) {
+        
+    }
+    
+
+    
     /*
     // MARK: - Navigation
 
@@ -26,4 +40,12 @@ class HomeViewController: UIViewController {
     }
     */
 
+}
+
+extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        receiptImageView.image = image
+        picker.dismiss(animated: true)
+    }
 }
