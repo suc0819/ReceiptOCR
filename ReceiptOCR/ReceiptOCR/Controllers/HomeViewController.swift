@@ -34,10 +34,15 @@ class HomeViewController:  UIViewController{
         
         ocrController.analyze(image: image){
             result in
+            self.saveToHistory(result)
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "showResult", sender: result)
             }
         }
+    }
+    
+    @IBAction func viewHistoryTapped(_ sender: Any) {
+        performSegue(withIdentifier: "showHistory", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -54,5 +59,20 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         receiptImageView.image = image
         picker.dismiss(animated: true)
+    }
+}
+
+extension HomeViewController{
+    func saveToHistory(_ receipt: ReceiptData) {
+        var history: [ReceiptData] = []
+        if let data = UserDefaults.standard.data(forKey: "receiptHistory"),
+           let decoded = try? JSONDecoder().decode([ReceiptData].self, from: data) {
+            history = decoded
+        }
+        history.insert(receipt, at: 0)
+        if let encoded = try? JSONEncoder().encode(history) {
+            UserDefaults.standard.set(encoded, forKey: "receiptHistory")
+            print("저장완료: \(history.count)개")
+        }
     }
 }
