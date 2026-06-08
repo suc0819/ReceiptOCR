@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController:  UIViewController{
 
     @IBOutlet weak var receiptImageView: UIImageView!
+    let ocrController = OCRController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,20 +27,25 @@ class HomeViewController:  UIViewController{
     }
     
     @IBAction func startAnalyzeTapped(_ sender: Any) {
+        guard let image = receiptImageView.image else {
+            print("이미지 없음")
+            return
+        }
         
+        ocrController.analyze(image: image){
+            result in
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "showResult", sender: result)
+            }
+        }
     }
     
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "showResult" {
+            let vc = segue.destination as! ResultViewController
+            vc.receiptData = sender as? ReceiptData
+        }
     }
-    */
 
 }
 

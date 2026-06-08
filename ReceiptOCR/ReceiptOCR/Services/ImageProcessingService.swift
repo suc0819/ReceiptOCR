@@ -26,4 +26,13 @@ class ImageProcessingService {
         
         return UIImage(cgImage: cgImage)
     }
+    
+    private func resizeImage(_ image: UIImage) -> UIImage {
+        let newSize = CGSize(width: image.size.width * 2, height: image.size.height * 2)
+        UIGraphicsBeginImageContext(newSize)
+        image.draw(in: CGRect(origin: .zero, size: newSize))
+        let resized = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resized ?? image
+    }
 }

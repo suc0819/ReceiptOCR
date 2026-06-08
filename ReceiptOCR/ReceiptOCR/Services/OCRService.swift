@@ -23,8 +23,10 @@ class OCRService {
         
         request.recognitionLanguages = ["ko-KR", "en-US"]
         request.recognitionLevel = .accurate
+        request.usesLanguageCorrection = true
         
         let handler = VNImageRequestHandler(cgImage: cgImage)
         try? handler.perform([request])
     }
 }
+
