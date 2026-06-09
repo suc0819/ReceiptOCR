@@ -28,7 +28,9 @@ class HomeViewController:  UIViewController{
     
     @IBAction func startAnalyzeTapped(_ sender: Any) {
         guard let image = receiptImageView.image else {
-            print("이미지 없음")
+            let alert = UIAlertController(title: "알림", message: "영수증 이미지를 선택해주세요.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default))
+            present(alert, animated: true)
             return
         }
         
@@ -72,7 +74,6 @@ extension HomeViewController{
         history.insert(receipt, at: 0)
         if let encoded = try? JSONEncoder().encode(history) {
             UserDefaults.standard.set(encoded, forKey: "receiptHistory")
-            print("저장완료: \(history.count)개")
         }
     }
 }

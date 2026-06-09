@@ -40,8 +40,7 @@ extension HistoryViewController{
     func loadHistory(){
         if let data = UserDefaults.standard.data(forKey: "receiptHistory"), let decoded = try? JSONDecoder().decode([ReceiptData].self, from: data){
             historyList = decoded
-            print("불러오기 완료: \(historyList.count)개")
-        } else {print("저장된 기록 없음")}
+        }
         historyTableView.reloadData()
     }
 }
