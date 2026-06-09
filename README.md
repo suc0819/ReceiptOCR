@@ -3,7 +3,7 @@
 
 2171435 최성욱
 
-
+<br>
 
 ### 1. 프로젝트 수행 목적
 
@@ -33,3 +33,50 @@
 * 분석된 결과는 UserDefaults에 저장되어 이후에도 조회할 수 있다.
 
 #### 2.2 프로젝트 구조
+
+ReceiptOCR/
+├── Models/
+│   └── ReceiptData.swift
+├── Views/
+│   └── Main.storyboard
+├── Controllers/
+│   ├── HomeViewController.swift
+│   ├── ResultViewController.swift
+│   ├── HistoryViewController.swift
+│   └── OCRController.swift
+└── Services/
+├── OCRService.swift
+├── ImageProcessingService.swift
+└── TextAnalysisService.swift
+
+#### 2.3 결과물
+
+| Home | Result | History |
+|------|--------|---------|
+| 이미지 선택 화면 | 분석 결과 화면 | 기록 조회 화면 |
+
+#### 2.4 기대효과
+
+* OCR 기반 영수증 자동 분석으로 소비 내역을 간편하게 관리할 수 있다.
+* 이미지 전처리를 통해 흐리거나 작은 글씨가 포함된 영수증도 안정적으로 인식할 수 있다.
+* 유지보수와 확장이 용이한 MVC 구조로 설계되었다.
+
+#### 2.5 관련 기술
+
+| **구분** | **설명** |
+|--------|--------|
+| Vision Framework | Apple이 제공하는 이미지 분석 프레임워크로 OCR 텍스트 인식을 수행한다. |
+| CoreImage | 이미지 전처리 및 보정 처리를 수행한다. |
+| UserDefaults | 분석 결과를 로컬에 저장한다. |
+
+#### 2.6 개발 도구
+
+| **구분** | **설명** |
+|--------|--------|
+| Xcode | iOS 애플리케이션 개발 환경 |
+| GitHub | 프로젝트 버전 관리 |
+| iPhone 12 Pro 시뮬레이터 | iOS 14.5 환경에서 테스트 진행 |
+
+#### 2.7 발표영상
+
+추후 추가 예정
