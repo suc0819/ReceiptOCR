@@ -10,7 +10,8 @@ import CoreImage
 
 class ImageProcessingService {
     func preprocess(_ image: UIImage) -> UIImage {
-        guard let ciImage = CIImage(image: image) else { return image }
+        let resizedImage = resizeImage(image)
+        guard let ciImage = CIImage(image: resizedImage) else { return image }
         
         // 흑백 처리
         let grayscale = ciImage.applyingFilter("CIColorControls",
