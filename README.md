@@ -46,9 +46,9 @@ ReceiptOCR/
 │   ├── HistoryViewController.swift
 │   └── OCRController.swift
 └── Services/
-├── OCRService.swift
-├── ImageProcessingService.swift
-└── TextAnalysisService.swift
+    ├── OCRService.swift
+    ├── ImageProcessingService.swift
+    └── TextAnalysisService.swift
 ```
 
 #### 2.3 결과물
