@@ -18,6 +18,7 @@ class HistoryViewController: UIViewController {
         historyTableView.delegate = self
         historyTableView.dataSource = self
         loadHistory()
+        historyTableView.tableFooterView = UIView()
     }
     
 }

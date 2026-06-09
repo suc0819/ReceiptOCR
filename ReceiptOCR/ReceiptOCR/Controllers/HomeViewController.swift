@@ -11,11 +11,13 @@ class HomeViewController:  UIViewController{
 
     @IBOutlet weak var receiptImageView: UIImageView!
     let ocrController = OCRController()
+    @IBOutlet weak var imageButton: UIButton!
+    @IBOutlet weak var analyzeButton: UIButton!
+    @IBOutlet weak var historyButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
 
@@ -75,5 +77,25 @@ extension HomeViewController{
         if let encoded = try? JSONEncoder().encode(history) {
             UserDefaults.standard.set(encoded, forKey: "receiptHistory")
         }
+    }
+    
+    func setupUI() {
+        receiptImageView.layer.borderWidth = 1
+        receiptImageView.layer.borderColor = UIColor.lightGray.cgColor
+        receiptImageView.layer.cornerRadius = 8
+        receiptImageView.contentMode = .scaleAspectFit
+        receiptImageView.backgroundColor = UIColor.systemGray6
+        
+        imageButton.layer.borderWidth = 1
+        imageButton.layer.borderColor = UIColor.systemBlue.cgColor
+        imageButton.layer.cornerRadius = 8
+        
+        analyzeButton.backgroundColor = UIColor.systemBlue
+        analyzeButton.setTitleColor(.white, for: .normal)
+        analyzeButton.layer.cornerRadius = 8
+        
+        historyButton.layer.borderWidth = 1
+        historyButton.layer.borderColor = UIColor.systemGray.cgColor
+        historyButton.layer.cornerRadius = 8
     }
 }

@@ -16,40 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxb-m9-Euw">
-                                <rect key="frame" x="34" y="88" width="322" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rxb-m9-Euw">
+                                <rect key="frame" x="20" y="148" width="350" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="CiP-M5-Z7X"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkJ-Db-uST">
-                                <rect key="frame" x="167" y="286" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="분석 시작"/>
-                                <connections>
-                                    <action selector="startAnalyzeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wvv-Y0-v3T"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVC-j4-Aky">
-                                <rect key="frame" x="275" y="286" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="기록 보기"/>
-                                <connections>
-                                    <action selector="viewHistoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Enh-WZ-1lK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQs-IW-UVN">
-                                <rect key="frame" x="54" y="286" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="이미지 선택"/>
-                                <connections>
-                                    <action selector="selectImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8G-oc-pz3"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NmO-sZ-dFG">
+                                <rect key="frame" x="20" y="468" width="350" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQs-IW-UVN">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                        <state key="normal" title="이미지 선택"/>
+                                        <connections>
+                                            <action selector="selectImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8G-oc-pz3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkJ-Db-uST">
+                                        <rect key="frame" x="120" y="0.0" width="110" height="30"/>
+                                        <state key="normal" title="분석 시작"/>
+                                        <connections>
+                                            <action selector="startAnalyzeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wvv-Y0-v3T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVC-j4-Aky">
+                                        <rect key="frame" x="240" y="0.0" width="110" height="30"/>
+                                        <state key="normal" title="기록 보기"/>
+                                        <connections>
+                                            <action selector="viewHistoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Enh-WZ-1lK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NmO-sZ-dFG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4wQ-yx-V8F"/>
+                            <constraint firstItem="Rxb-m9-Euw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LAe-lq-QND"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rxb-m9-Euw" secondAttribute="trailing" constant="20" id="Q9h-0S-ei9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NmO-sZ-dFG" secondAttribute="trailing" constant="20" id="R8J-c5-jh6"/>
+                            <constraint firstItem="Rxb-m9-Euw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="e5q-bL-Vi9"/>
+                            <constraint firstItem="NmO-sZ-dFG" firstAttribute="top" secondItem="Rxb-m9-Euw" secondAttribute="bottom" constant="20" id="riL-lp-D2F"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UJy-yt-mBC"/>
                     <connections>
+                        <outlet property="analyzeButton" destination="TkJ-Db-uST" id="1V5-tr-6wB"/>
+                        <outlet property="historyButton" destination="OVC-j4-Aky" id="Ia0-u5-g4v"/>
+                        <outlet property="imageButton" destination="yQs-IW-UVN" id="FjQ-vB-xru"/>
                         <outlet property="receiptImageView" destination="Rxb-m9-Euw" id="kHH-8b-6Ve"/>
                         <segue destination="VtM-ZZ-SHv" kind="show" identifier="showResult" id="nj3-dp-4Dd"/>
                         <segue destination="lg4-5e-oad" kind="show" identifier="showHistory" id="5ag-9r-E2R"/>
@@ -76,8 +91,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dataLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWU-hh-y0H">
-                                        <rect key="frame" x="0.0" y="30.333333333333343" width="75" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWU-hh-y0H" userLabel="Date Label">
+                                        <rect key="frame" x="0.0" y="30.333333333333343" width="75.333333333333329" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -91,22 +106,34 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fWp-GG-Prl">
-                                <rect key="frame" x="30" y="239" width="330" height="521"/>
+                                <rect key="frame" x="30" y="250" width="330" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="uaa-0y-lpF"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uci-PT-2Qo">
+                                <rect key="frame" x="0.0" y="239" width="390" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="VfP-6H-vrR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kfC-tR-3VU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fWp-GG-Prl" firstAttribute="leading" secondItem="kfC-tR-3VU" secondAttribute="leading" constant="30" id="K9y-Ly-vEh"/>
+                            <constraint firstItem="fWp-GG-Prl" firstAttribute="top" secondItem="uci-PT-2Qo" secondAttribute="bottom" constant="10" id="LJ8-wD-6hH"/>
+                            <constraint firstItem="uci-PT-2Qo" firstAttribute="leading" secondItem="kfC-tR-3VU" secondAttribute="leading" id="LQj-FH-36X"/>
                             <constraint firstItem="LT6-3K-fT7" firstAttribute="leading" secondItem="kfC-tR-3VU" secondAttribute="leading" constant="30" id="MQO-qt-qtq"/>
                             <constraint firstItem="LT6-3K-fT7" firstAttribute="top" secondItem="kfC-tR-3VU" secondAttribute="top" constant="50" id="QeY-2E-I8v"/>
-                            <constraint firstItem="fWp-GG-Prl" firstAttribute="top" secondItem="LT6-3K-fT7" secondAttribute="bottom" constant="20" id="a7l-6d-G7Y"/>
-                            <constraint firstItem="kfC-tR-3VU" firstAttribute="bottom" secondItem="fWp-GG-Prl" secondAttribute="bottom" constant="50" id="iGB-oh-dVs"/>
+                            <constraint firstItem="uci-PT-2Qo" firstAttribute="top" secondItem="LT6-3K-fT7" secondAttribute="bottom" constant="20" id="gBR-xB-OXT"/>
+                            <constraint firstItem="kfC-tR-3VU" firstAttribute="trailing" secondItem="uci-PT-2Qo" secondAttribute="trailing" id="mWJ-Wd-Vkr"/>
                             <constraint firstItem="kfC-tR-3VU" firstAttribute="trailing" secondItem="LT6-3K-fT7" secondAttribute="trailing" constant="30" id="qjC-E2-Edp"/>
                             <constraint firstItem="kfC-tR-3VU" firstAttribute="trailing" secondItem="fWp-GG-Prl" secondAttribute="trailing" constant="30" id="tVJ-dw-weS"/>
                         </constraints>
@@ -114,7 +141,8 @@
                     <navigationItem key="navigationItem" id="zGA-pG-l5s"/>
                     <connections>
                         <outlet property="amountLabel" destination="h5H-zU-shc" id="7jq-9T-ZA3"/>
-                        <outlet property="dataLabel" destination="kWU-hh-y0H" id="Uje-4W-Pb1"/>
+                        <outlet property="dateLabel" destination="kWU-hh-y0H" id="0xv-mf-7Dv"/>
+                        <outlet property="dividerView" destination="uci-PT-2Qo" id="O7t-VV-yYE"/>
                         <outlet property="rawTextView" destination="fWp-GG-Prl" id="rPG-g2-4tb"/>
                         <outlet property="storeNameLabel" destination="2PG-Ty-Bqq" id="RiY-AU-wSz"/>
                     </connections>
