@@ -21,6 +21,7 @@
 		E966C69A2FD5B24E00C838FE /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C6992FD5B24E00C838FE /* OCRService.swift */; };
 		E966C69C2FD5B6E400C838FE /* TextAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C69B2FD5B6E400C838FE /* TextAnalysisService.swift */; };
 		E966C69E2FD5B7F400C838FE /* OCRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966C69D2FD5B7F400C838FE /* OCRController.swift */; };
+		E966C6A02FD89B7E00C838FE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E966C69F2FD89B7E00C838FE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E966C6992FD5B24E00C838FE /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
 		E966C69B2FD5B6E400C838FE /* TextAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnalysisService.swift; sourceTree = "<group>"; };
 		E966C69D2FD5B7F400C838FE /* OCRController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRController.swift; sourceTree = "<group>"; };
+		E966C69F2FD89B7E00C838FE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,6 @@
 		E966C6752FD55D5100C838FE /* ReceiptOCR */ = {
 			isa = PBXGroup;
 			children = (
-				E966C68E2FD569F000C838FE /* Utilities */,
 				E966C68D2FD569E500C838FE /* Services */,
 				E966C68C2FD569DC00C838FE /* Controllers */,
 				E966C68B2FD5667A00C838FE /* Views */,
@@ -80,10 +81,10 @@
 				E966C6762FD55D5100C838FE /* AppDelegate.swift */,
 				E966C6782FD55D5100C838FE /* SceneDelegate.swift */,
 				E966C67A2FD55D5100C838FE /* ViewController.swift */,
-				E966C67C2FD55D5100C838FE /* Main.storyboard */,
 				E966C67F2FD55D5600C838FE /* Assets.xcassets */,
 				E966C6812FD55D5600C838FE /* LaunchScreen.storyboard */,
 				E966C6842FD55D5600C838FE /* Info.plist */,
+				E966C69F2FD89B7E00C838FE /* README.md */,
 			);
 			path = ReceiptOCR;
 			sourceTree = "<group>";
@@ -99,6 +100,7 @@
 		E966C68B2FD5667A00C838FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E966C67C2FD55D5100C838FE /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,13 +124,6 @@
 				E966C69B2FD5B6E400C838FE /* TextAnalysisService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		E966C68E2FD569F000C838FE /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +185,7 @@
 			files = (
 				E966C6832FD55D5600C838FE /* LaunchScreen.storyboard in Resources */,
 				E966C6802FD55D5600C838FE /* Assets.xcassets in Resources */,
+				E966C6A02FD89B7E00C838FE /* README.md in Resources */,
 				E966C67E2FD55D5100C838FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
