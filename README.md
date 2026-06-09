@@ -34,6 +34,7 @@
 
 #### 2.2 프로젝트 구조
 
+```
 ReceiptOCR/
 ├── Models/
 │   └── ReceiptData.swift
@@ -48,6 +49,7 @@ ReceiptOCR/
 ├── OCRService.swift
 ├── ImageProcessingService.swift
 └── TextAnalysisService.swift
+```
 
 #### 2.3 결과물
 
@@ -75,7 +77,6 @@ ReceiptOCR/
 |--------|--------|
 | Xcode | iOS 애플리케이션 개발 환경 |
 | GitHub | 프로젝트 버전 관리 |
-| iPhone 12 Pro 시뮬레이터 | iOS 14.5 환경에서 테스트 진행 |
 
 #### 2.7 발표영상
 
