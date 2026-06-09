@@ -67,7 +67,7 @@ ReceiptOCR/
 
 | **구분** | **설명** |
 |--------|--------|
-| Vision Framework | Apple이 제공하는 이미지 분석 프레임워크로 OCR 텍스트 인식을 수행한다. |
+| Vision Framework | 이미지 분석 프레임워크로 OCR 텍스트 인식을 수행한다. |
 | CoreImage | 이미지 전처리 및 보정 처리를 수행한다. |
 | UserDefaults | 분석 결과를 로컬에 저장한다. |
 
