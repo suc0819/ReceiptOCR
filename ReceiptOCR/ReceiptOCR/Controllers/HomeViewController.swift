@@ -14,6 +14,8 @@ class HomeViewController:  UIViewController{
     @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var analyzeButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
+    let activityIndicator = UIActivityIndicatorView(style: .large)
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +38,15 @@ class HomeViewController:  UIViewController{
             return
         }
         
+        activityIndicator.startAnimating()
+        view.isUserInteractionEnabled = false
+        
         ocrController.analyze(image: image){
             result in
             self.saveToHistory(result)
             DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+                self.view.isUserInteractionEnabled = true
                 self.performSegue(withIdentifier: "showResult", sender: result)
             }
         }
@@ -63,6 +70,7 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         receiptImageView.image = image
         picker.dismiss(animated: true)
+        receiptImageView.subviews.forEach { $0.isHidden = true }
     }
 }
 
@@ -97,5 +105,26 @@ extension HomeViewController{
         historyButton.layer.borderWidth = 1
         historyButton.layer.borderColor = UIColor.systemGray.cgColor
         historyButton.layer.cornerRadius = 8
+        
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        view.addSubview(activityIndicator)
+        
+        titleLabel.text = "영수증 OCR"
+        titleLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        titleLabel.textAlignment = .center
+        
+        let placeholderLabel = UILabel()
+        placeholderLabel.text = "영수증 이미지를 선택하세요"
+        placeholderLabel.textColor = UIColor.systemGray
+        placeholderLabel.font = UIFont.systemFont(ofSize: 14)
+        placeholderLabel.textAlignment = .center
+        placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
+        receiptImageView.addSubview(placeholderLabel)
+
+        NSLayoutConstraint.activate([
+            placeholderLabel.centerXAnchor.constraint(equalTo: receiptImageView.centerXAnchor),
+            placeholderLabel.centerYAnchor.constraint(equalTo: receiptImageView.centerYAnchor)
+        ])
     }
 }

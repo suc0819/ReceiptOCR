@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rxb-m9-Euw">
-                                <rect key="frame" x="20" y="148" width="350" height="300"/>
+                                <rect key="frame" x="20" y="188.33333333333337" width="350" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="CiP-M5-Z7X"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NmO-sZ-dFG">
-                                <rect key="frame" x="20" y="468" width="350" height="30"/>
+                                <rect key="frame" x="20" y="508.33333333333326" width="350" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQs-IW-UVN">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
@@ -48,16 +48,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영수증 OCR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEv-NS-qba">
+                                <rect key="frame" x="153.33333333333334" y="117.99999999999999" width="83.666666666666657" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Rxb-m9-Euw" firstAttribute="top" secondItem="eEv-NS-qba" secondAttribute="bottom" constant="50" id="0Ew-cB-Uq8"/>
                             <constraint firstItem="NmO-sZ-dFG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4wQ-yx-V8F"/>
                             <constraint firstItem="Rxb-m9-Euw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LAe-lq-QND"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rxb-m9-Euw" secondAttribute="trailing" constant="20" id="Q9h-0S-ei9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NmO-sZ-dFG" secondAttribute="trailing" constant="20" id="R8J-c5-jh6"/>
-                            <constraint firstItem="Rxb-m9-Euw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="e5q-bL-Vi9"/>
+                            <constraint firstItem="eEv-NS-qba" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="a4L-OA-yN6"/>
                             <constraint firstItem="NmO-sZ-dFG" firstAttribute="top" secondItem="Rxb-m9-Euw" secondAttribute="bottom" constant="20" id="riL-lp-D2F"/>
+                            <constraint firstItem="eEv-NS-qba" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zKn-XL-DUa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UJy-yt-mBC"/>
@@ -66,6 +74,7 @@
                         <outlet property="historyButton" destination="OVC-j4-Aky" id="Ia0-u5-g4v"/>
                         <outlet property="imageButton" destination="yQs-IW-UVN" id="FjQ-vB-xru"/>
                         <outlet property="receiptImageView" destination="Rxb-m9-Euw" id="kHH-8b-6Ve"/>
+                        <outlet property="titleLabel" destination="eEv-NS-qba" id="QKf-9A-TCQ"/>
                         <segue destination="VtM-ZZ-SHv" kind="show" identifier="showResult" id="nj3-dp-4Dd"/>
                         <segue destination="lg4-5e-oad" kind="show" identifier="showHistory" id="5ag-9r-E2R"/>
                     </connections>
