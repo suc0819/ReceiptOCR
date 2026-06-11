@@ -34,6 +34,8 @@
 
 #### 2.2 프로젝트 구조
 
+<img width="787" height="585" alt="t1" src="https://github.com/user-attachments/assets/c30fda07-da04-4c8e-a114-3587b605f777" />
+
 ```
 ReceiptOCR/
 ├── Models/
@@ -57,6 +59,16 @@ ReceiptOCR/
 |------|--------|---------|
 | 이미지 선택 화면 | 분석 결과 화면 | 기록 조회 화면 |
 
+##### 이미지 선택 화면
+<img width="383" height="826" alt="r1" src="https://github.com/user-attachments/assets/d31aff03-7b13-404e-abb4-bd0aef431150" />
+<img width="386" height="829" alt="r2" src="https://github.com/user-attachments/assets/672b4170-2456-4dfd-ae0e-0b02943993e2" />
+
+##### 분석 결과 화면
+<img width="391" height="831" alt="r3" src="https://github.com/user-attachments/assets/dd32314a-b627-4529-9887-91a969802c9d" />
+
+##### 기록 조회 화면
+<img width="378" height="830" alt="r4" src="https://github.com/user-attachments/assets/7904c525-f77c-4f65-be99-88660d0318c2" />
+
 #### 2.4 기대효과
 
 * OCR 기반 영수증 자동 분석으로 소비 내역을 간편하게 관리할 수 있다.
@@ -64,6 +76,8 @@ ReceiptOCR/
 * 유지보수와 확장이 용이한 MVC 구조로 설계되었다.
 
 #### 2.5 관련 기술
+
+<img width="688" height="105" alt="t2" src="https://github.com/user-attachments/assets/4205e13f-2fba-4237-99e4-916006ca6a94" />
 
 | **구분** | **설명** |
 |--------|--------|
