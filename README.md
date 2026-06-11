@@ -94,4 +94,4 @@ ReceiptOCR/
 
 #### 2.7 발표영상
 
-추후 추가 예정
+https://youtu.be/d6OYLstsDgg
