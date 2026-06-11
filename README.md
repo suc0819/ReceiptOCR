@@ -34,7 +34,7 @@
 
 #### 2.2 프로젝트 구조
 
-<img width="390" height="290" alt="t1" src="https://github.com/user-attachments/assets/c30fda07-da04-4c8e-a114-3587b605f777" />
+<img width="500" height="400" alt="t1" src="https://github.com/user-attachments/assets/c30fda07-da04-4c8e-a114-3587b605f777" />
 
 ```
 ReceiptOCR/
