@@ -60,14 +60,14 @@ ReceiptOCR/
 | 이미지 선택 화면 | 분석 결과 화면 | 기록 조회 화면 |
 
 ##### 이미지 선택 화면
-<img width="383" height="826" alt="r1" src="https://github.com/user-attachments/assets/d31aff03-7b13-404e-abb4-bd0aef431150" />
-<img width="386" height="829" alt="r2" src="https://github.com/user-attachments/assets/672b4170-2456-4dfd-ae0e-0b02943993e2" />
+<img width="190" height="410" alt="r1" src="https://github.com/user-attachments/assets/d31aff03-7b13-404e-abb4-bd0aef431150" />
+<img width="190" height="410" alt="r2" src="https://github.com/user-attachments/assets/672b4170-2456-4dfd-ae0e-0b02943993e2" />
 
 ##### 분석 결과 화면
-<img width="391" height="831" alt="r3" src="https://github.com/user-attachments/assets/dd32314a-b627-4529-9887-91a969802c9d" />
+<img width="190" height="410" alt="r3" src="https://github.com/user-attachments/assets/dd32314a-b627-4529-9887-91a969802c9d" />
 
 ##### 기록 조회 화면
-<img width="378" height="830" alt="r4" src="https://github.com/user-attachments/assets/7904c525-f77c-4f65-be99-88660d0318c2" />
+<img width="190" height="410" alt="r4" src="https://github.com/user-attachments/assets/7904c525-f77c-4f65-be99-88660d0318c2" />
 
 #### 2.4 기대효과
 
