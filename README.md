@@ -92,6 +92,6 @@ ReceiptOCR/
 | Xcode | iOS 애플리케이션 개발 환경 |
 | GitHub | 프로젝트 버전 관리 |
 
-#### 2.7 발표영상
+#### 2.7 시연영상
 
 https://youtu.be/d6OYLstsDgg
